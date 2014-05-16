@@ -1,0 +1,39 @@
+{
+  "name": "generator-westie",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "twocabbages/generator-westie",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": "https://github.com/twocabbages/generator-westie"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "~0.4.0",
+    "random-string": "~0.1.1",
+    "shelljs": "~0.2.6",
+    "yeoman-generator": "~0.16.0",
+    "moment": "~2.6.0",
+    "pluralize": "0.0.9"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}
