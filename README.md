@@ -1,6 +1,6 @@
-# generator-westie [![Build Status](https://secure.travis-ci.org/twocabbages/generator-westie.png?branch=master)](https://travis-ci.org/twocabbages/generator-westie)
-
+# generator-westie
 > [Yeoman](http://yeoman.io) generator
+> use Yeoman generator to generate PHP Slim App with Test Driver Development
 
 
 ## Getting Started
@@ -29,18 +29,55 @@ To install generator-westie from npm, run:
 $ npm install -g generator-westie
 ```
 
-Finally, initiate the generator:
+
+
+
+### Go Starting
 
 ```
 $ yo westie
 ```
 
-### Getting To Know Yeoman
+```
+$ cd ~/site;chmod -R 0777 tmp
+```
 
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
+request http://localhost.    success!
 
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+### Config PHPUnit
 
+I use PHPStrom
+
+1. PHPStorm\Preferances\PHP\PHPUnit\User Customer loader : /usr/local/bin/phpunit,
+2. PHPStorm\Preferances\PHP\PHPUnit\default bootstrap file : ~/site/tests/bootstrap.
+3. Run\Edit Configuration\+\PHPUnit\Directory :  ~/site/tests.
+4. go run.
+
+## Generate Model And Controller
+
+### generate Model
+
+```
+$ yo westie:model "post" name:string telephone:integer status:integer
+```
+Because I use [Phinx](http://phinx.org/) so next let us generate mysql table.
+
+The mysql config is in the phinx.yml.
+
+```
+$ php vendor/robmorgan/phinx/bin/phinx migrate -e development
+```
+Then Run test and test you app is right?
+
+### generate Controller
+
+```
+$ yo westie:controller "post"
+```
+
+Then Run test and test you app is right?
+
+### Scaffold is writing...
 
 ## License
 
