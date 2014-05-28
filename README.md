@@ -61,7 +61,28 @@ $ yo westieslim:model "post" name:string telephone:integer status:integer
 ```
 Because I use [Phinx](http://phinx.org/) so next let us generate mysql table.
 
+```
+$ php vendor/bin/phinx init
+$ mkdir migrations         //if it is not exist
+```
+
 The mysql config is in the phinx.yml.
+```
+paths:
+    migrations: %%PHINX_CONFIG_DIR%%/migrations
+
+environments:
+    default_migration_table: phinxlog
+    default_database: development
+    development:
+        adapter: mysql
+        host: localhost
+        name: database
+        user: mysql_username
+        pass: 'mysql_password'
+        port: 3306
+        charset: utf8
+```
 
 ```
 $ php vendor/robmorgan/phinx/bin/phinx migrate -e development
