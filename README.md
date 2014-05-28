@@ -1,4 +1,4 @@
-# generator-westie
+# generator-westieslim
 > [Yeoman](http://yeoman.io) generator.use Yeoman generator to generate PHP Slim App with Test Driver Development
 
 
@@ -22,10 +22,10 @@ $ npm install -g yo
 
 Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
-To install generator-westie from npm, run:
+To install generator-westieslim from npm, run:
 
 ```
-$ npm install -g generator-westie
+$ npm install -g generator-westieslim
 ```
 
 
@@ -34,7 +34,7 @@ $ npm install -g generator-westie
 ### Go Starting
 
 ```
-$ yo westie
+$ yo westieslim
 ```
 
 ```
@@ -57,7 +57,7 @@ I use PHPStrom
 ### generate Model
 
 ```
-$ yo westie:model "post" name:string telephone:integer status:integer
+$ yo westieslim:model "post" name:string telephone:integer status:integer
 ```
 Because I use [Phinx](http://phinx.org/) so next let us generate mysql table.
 
@@ -71,12 +71,17 @@ Then Run test and test you app is right?
 ### generate Controller
 
 ```
-$ yo westie:controller "post"
+$ yo westieslim:controller "post"
 ```
 
 Then Run test and test you app is right?
 
-### Scaffold is writing...
+### westieslim:Scaffold
+
+```
+$ yo westieslim:model "post" name:string telephone:integer status:integer
+$ php vendor/bin/phinx migrate -e development
+```
 
 ## License
 

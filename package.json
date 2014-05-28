@@ -1,14 +1,14 @@
 {
-  "name": "generator-westie",
+  "name": "generator-westieslim",
   "version": "0.0.0",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "twocabbages/generator-westie",
+  "repository": "twocabbages/generator-westieslim",
   "author": {
     "name": "",
     "email": "",
-    "url": "https://github.com/twocabbages/generator-westie"
+    "url": "https://github.com/twocabbages/generator-westieslim"
   },
   "engines": {
     "node": ">=0.10.0"
