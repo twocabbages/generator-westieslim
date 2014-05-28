@@ -3,8 +3,8 @@
 if (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false))
     header('X-UA-Compatible: IE=edge,chrome=1');
 
-define("__PUBLIC__",getcwd());
-define("APP_PATH",  dirname(__PUBLIC__));
+define("__PUBLIC__","");
+define("APP_PATH",  dirname(getcwd()));
 define("APP_ENV",   getenv("APPLICATION_ENV") == "" ? 'development' : getenv("APPLICATION_ENV"));
 
 //Register lib autoloader

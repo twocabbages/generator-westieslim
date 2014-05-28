@@ -13,8 +13,8 @@
 //
 // -----------------------------------------------------------------------------
 chdir(__DIR__ . "/../public");
-define("__PUBLIC__",getcwd());
-define("APP_PATH",  dirname(__PUBLIC__));
+define("__PUBLIC__","");
+define("APP_PATH",  dirname(getcwd()));
 define("APP_ENV",   getenv("APPLICATION_ENV") == "" ? 'development' : getenv("APPLICATION_ENV"));
 
 

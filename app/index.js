@@ -60,8 +60,8 @@ var WestieGenerator = yeoman.generators.Base.extend({
                                         css: /<link.*href=['"](.+)['"]/gi
                                     },
                                     replace: {
-                                        js: '<script src="{{ __PUBLIC__ }}/{{filePath}}"></script>',
-                                        css: '<link rel="stylesheet" href="{{ __PUBLIC__ }}/{{filePath}}" />'
+                                        js: '<script src="{{ constant("__PUBLIC__") }}/{{filePath}}"></script>',
+                                        css: '<link rel="stylesheet" href="{{ constant("__PUBLIC__") }}/{{filePath}}" />'
                                     }
                                 }
                             }

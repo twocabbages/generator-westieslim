@@ -1,6 +1,5 @@
 # generator-westie
-> [Yeoman](http://yeoman.io) generator
-> use Yeoman generator to generate PHP Slim App with Test Driver Development
+> [Yeoman](http://yeoman.io) generator.use Yeoman generator to generate PHP Slim App with Test Driver Development
 
 
 ## Getting Started
