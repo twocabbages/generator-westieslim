@@ -1,8 +1,9 @@
 <?php
 
-namespace Controller;
+namespace app\controller;
+use app\core\BaseController;
 
-class <%= _.capitalize(_.camelize(name)) %> extends \Core\Controller
+class <%= _.capitalize(_.camelize(name)) %> extends BaseController
 {
     public function __construct()
     {

@@ -131,15 +131,15 @@ var WestieGenerator = yeoman.generators.Base.extend({
         this.mkdir('public/img');
 
         this.mkdir('app');
-        this.mkdir('app/Config');
-        this.mkdir('app/Common');
+        this.mkdir('app/config');
+        this.mkdir('app/common');
         this.mkdir('app/Routes');
-        this.mkdir('app/Core');
-        this.mkdir('app/Model');
-        this.mkdir('app/Controller');
-        this.mkdir('app/Views');
-        this.mkdir('app/Views/errors');
-        this.mkdir('app/Views/layouts');
+        this.mkdir('app/core');
+        this.mkdir('app/model');
+        this.mkdir('app/controller');
+        this.mkdir('app/views');
+        this.mkdir('app/views/errors');
+        this.mkdir('app/views/layouts');
 
         this.mkdir('tmp');
         this.mkdir('tmp/logs');
@@ -160,19 +160,18 @@ var WestieGenerator = yeoman.generators.Base.extend({
 
         this.copy('tests/_bootstrap.php', 'tests/bootstrap.php');
         this.copy('tests/_test_controller_default.php', 'tests/integration/IndexTest.php');
-        this.copy('tests/_test_controller_index.php', 'tests/controller/IndexControllerTest.php');
+        this.copy('tests/_test_controller_index.php', 'tests/controller/IndexcontrollerTest.php');
 
         this.copy('public/_index.php', 'public/index.php');
         this.copy('app/_app.php', 'app/app.php');
-        this.copy('app/_common_bootstrap.php', 'app/Common/bootstrap.php');
+        this.copy('app/_common_bootstrap.php', 'app/common/bootstrap.php');
 
 
-        this.copy('app/_controller_index.php', 'app/Controller/Index.php');
-        this.copy('app/_controller_core.php', 'app/Core/Controller.php');
-        this.copy('app/_routes_index.php', 'app/Routes/Index.php');
+        this.copy('app/_controller_index.php', 'app/controller/Index.php');
+        this.copy('app/_controller_core.php', 'app/core/controller.php');
 
 
-        this.copy('app/_config_config.yml', 'app/Config/config.yml');
+        this.copy('app/_config_config.yml', 'app/config/config.yml');
 
         this.copy('app/views/_index.twig', 'app/Views/index.twig');
         this.copy('app/views/layouts/_layout.twig', 'app/Views/layouts/layout.twig');

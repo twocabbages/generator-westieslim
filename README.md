@@ -52,9 +52,9 @@ I use PHPStrom
 3. Run\Edit Configuration\+\PHPUnit\Directory :  ~/site/tests.
 4. go run.
 
-## Generate Model And Controller
+## Generate model And controller
 
-### generate Model
+### generate model
 
 ```
 $ yo westieslim:model "post" name:string telephone:integer status:integer
@@ -89,7 +89,7 @@ $ php vendor/robmorgan/phinx/bin/phinx migrate -e development
 ```
 Then Run test and test you app is right?
 
-### generate Controller
+### generate controller
 
 ```
 $ yo westieslim:controller "post"

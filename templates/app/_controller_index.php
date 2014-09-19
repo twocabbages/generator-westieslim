@@ -1,8 +1,8 @@
 <?php
-namespace Controller;
+namespace app\controller;
+use app\core\BaseController;
 
-
-class Index extends \Core\Controller{
+class Index extends BaseController{
     public function __construct()
     {
         parent::__construct();

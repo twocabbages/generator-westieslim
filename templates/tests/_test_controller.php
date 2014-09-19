@@ -1,6 +1,6 @@
 <?php
 
-class <%= controller_name %>ControllerTest extends Slim_Framework_TestCase {
+class <%= controller_name %>controllerTest extends Slim_Framework_TestCase {
     public function testIndex()
     {
         $parameters = array();

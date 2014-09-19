@@ -21,12 +21,4 @@
         "php-activerecord/php-activerecord": "v1.1.2",
         "symfony/yaml": "2.5.*@dev"
     },
-    "autoload": {
-        "psr-4": {
-            "Controller\\": "app/Controller",
-            "Model\\": "app/Model",
-            "Core\\":"app/Core"
-        },
-        "files": ["app/Common/bootstrap.php"]
-    }
 }

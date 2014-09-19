@@ -7,7 +7,7 @@ var pluralize = require("pluralize");
 
 
 
-var ModelGenerator = yeoman.generators.NamedBase.extend({
+var modelGenerator = yeoman.generators.NamedBase.extend({
     init: function () {
         var self = this;
         this.table_name = pluralize(this.name);
@@ -38,7 +38,7 @@ var ModelGenerator = yeoman.generators.NamedBase.extend({
     },
     app: function () {
         this.template("migrations/_migrate.php", "migrations/" + moment().format("YYYYMMDDHHmmss") + "_" +this._.underscored(this.MigrateClassName) + ".php");
-        this.template("app/_model_template.php", "app/Model/" + this._.capitalize(this._.camelize(this.name)) + ".php");
+        this.template("app/_model_template.php", "app/model/" + this._.capitalize(this._.camelize(this.name)) + ".php");
         this.template("tests/_test_model.php", "tests/model/" + this._.capitalize(this._.camelize(this.name+"_model_test")) + ".php");
     },
     files: function () {
@@ -46,4 +46,4 @@ var ModelGenerator = yeoman.generators.NamedBase.extend({
     }
 });
 
-module.exports = ModelGenerator;
+module.exports = modelGenerator;

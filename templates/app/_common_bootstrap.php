@@ -4,6 +4,8 @@ date_default_timezone_set("UTC");
 function ConfigActiveRecord($environment)
 {
     //setup php-activerecord
+    ActiveRecord\Connection::$datetime_format = 'Y-m-d H:i:s';
+    ActiveRecord\DateTime::$FORMATS['iso8601'] = 'Y-m-d H:i:s';
     ActiveRecord\Config::initialize(function ($cfg) {
         //get database config
         $dbConfig = Symfony\Component\Yaml\Yaml::parse(APP_PATH . '/phinx.yml');
@@ -15,7 +17,7 @@ function ConfigActiveRecord($environment)
             }
         }
 
-        $cfg->set_model_directory(APP_PATH . '/app/Model');
+        $cfg->set_model_directory(APP_PATH . '/app/model');
         $cfg->set_connections($dbConnections);
     });
     $cfg = ActiveRecord\Config::instance();

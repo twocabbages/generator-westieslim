@@ -8,7 +8,9 @@ define("APP_PATH",  dirname(getcwd()));
 define("APP_ENV",   getenv("APPLICATION_ENV") == "" ? 'development' : getenv("APPLICATION_ENV"));
 
 //Register lib autoloader
-require APP_PATH . '/vendor/autoload.php';
+$loader = require APP_PATH . '/vendor/autoload.php';
+$loader->setPsr4("app\\", __DIR__ . "/../app");
+require(__DIR__ . "/../app/common/bootstrap.php");
 
 $app = new \Slim\Slim(array(
     'mode'  => APP_ENV,

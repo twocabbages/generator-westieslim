@@ -1,6 +1,6 @@
 <?php
 
-class IndexControllerTest extends Slim_Framework_TestCase {
+class IndexcontrollerTest extends Slim_Framework_TestCase {
     public function testIndex()
     {
         $parameters = array();

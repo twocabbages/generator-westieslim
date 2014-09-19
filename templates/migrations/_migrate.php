@@ -17,25 +17,13 @@ class <%= MigrateClassName %> extends AbstractMigration
     /**
      * Migrate Up.
      */
-    public function up()
+    public function change()
     {
          $table = $this->table('<%= table_name %>');
-                 $table
-                    <% _.each(attrs, function(attr){ %>
-                     ->addColumn('<%= attr.name %>', '<%= attr.type %>', array('limit' => <% if(attr.type == 'integer') { %>11<% }else{ %>255<% } %>,'default' => <% if(attr.type == 'integer') { %>0<% }else{ %>""<% } %>, "comment"=>"<%= attr.name %> column"))
+                 $table<% _.each(attrs, function(attr){ %>->addColumn('<%= attr.name %>', '<%= attr.type %>', array('null'=> true, 'length' => <% if(attr.type == 'integer') { %>11<% }else{ %>255<% } %>,'default' => <% if(attr.type == 'integer') { %>0<% }else{ %>""<% } %>, "comment"=>""))
                     <% }) %>
-                     ->addColumn('created', 'timestamp',array("comment"=>"创建时间"))
+                     ->addColumn('created', 'timestamp',array("comment"=>"创建时间", 'default'=>'CURRENT_TIMESTAMP'))
                      ->create();
     }
 
-    /**
-     * Migrate Down.
-     */
-    public function down()
-    {
-        if ($this->hasTable('<%= table_name %>')) {
-            $this->dropTable('<%= table_name %>');
-        }
-
-    }
 }

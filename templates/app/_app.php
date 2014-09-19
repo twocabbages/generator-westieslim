@@ -1,4 +1,10 @@
 <?php
+
+$config_config = Symfony\Component\Yaml\Yaml::parse(__DIR__ . '/config/config.yml');
+$app->config($config_config["config"]);
+$app->config($config_config["environments"][APP_ENV]);
+
+
 //prepare ActiveRecord
 ConfigActiveRecord(APP_ENV);
 
@@ -22,11 +28,6 @@ $app->view->parserExtensions = array(
     new \Slim\Views\TwigExtension(),
 );
 
-//Load routes
-foreach (glob( APP_PATH . "/app/Routes/*.php") as $filename)
-{
-    require $filename;
-}
 
 //Load 404 Route
 $app->notFound(function () use ($app) {

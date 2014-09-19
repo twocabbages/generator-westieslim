@@ -12,7 +12,7 @@ class <%= _.capitalize(_.camelize(name+"_model_test")) %> extends PHPUnit_Framew
                 <% }) %>
             );
 
-            $model = new \Model\<%= _.capitalize(_.camelize(name)) %>($data);
+            $model = new \model\<%= _.capitalize(_.camelize(name)) %>($data);
 
             $this->assertTrue($model->save());
 
@@ -22,7 +22,7 @@ class <%= _.capitalize(_.camelize(name+"_model_test")) %> extends PHPUnit_Framew
          * @depends testCreate
          */
         public function testRead($model){
-            $model = \Model\<%= _.capitalize(_.camelize(name)) %>::find($data = array(
+            $model = \model\<%= _.capitalize(_.camelize(name)) %>::find($data = array(
                 <% _.each(attrs, function(attr){ %>
                     "<%= attr.name %>" => <% if(attr.type == 'integer') { %>1<% }else{ %>"test"<% } %>,
                 <% }) %>

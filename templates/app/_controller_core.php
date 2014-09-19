@@ -1,9 +1,9 @@
 <?php
 
-namespace Core;
+namespace app\core;
 
 
-class Controller{
+class BaseController{
     protected $app;
     public function __construct()
     {
